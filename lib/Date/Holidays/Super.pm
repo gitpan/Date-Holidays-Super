@@ -1,11 +1,11 @@
 package Date::Holidays::Super;
 
-# $Id: Super.pm 1347 2004-05-26 09:10:20Z jonasbn $
+# $Id: Super.pm 1369 2004-05-31 07:43:06Z jonasbn $
 
 use strict;
 use vars qw($VERSION);
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 sub is_holiday {
 	return 0;
@@ -27,16 +27,16 @@ Date::Holidays::Super - a SUPER class for the Date::Holidays::* modules
 
 package MyHolidays;
 
-use Date::Holidays::Super;
-use vars qw(@ISA);
+	use Date::Holidays::Super;
+	use vars qw(@ISA);
 
-@ISA = qw(Date::Holidays::Super);
+	@ISA = qw(Date::Holidays::Super);
 
-my $mh = MyHolidays->new();
+	my $mh = MyHolidays->new();
 
-my $bool = $mh->is_holiday( ... ); 
+	my $bool = $mh->is_holiday( ... ); 
 
-my $hashref = $mh->holidays( ... ); 
+	my $hashref = $mh->holidays( ... ); 
 
 =head1 ABSTRACT
 

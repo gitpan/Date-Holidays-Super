@@ -1,3 +1,11 @@
 Changes file for Date-Holidays-Super
 
-$Id: Changes 1347 2004-05-26 09:10:20Z jonasbn $
+$Id: Changes 1369 2004-05-31 07:43:06Z jonasbn $
+
+0.02 - Released 31st. of May 2004 (update not necessary)
+
+- Indented code in POD after tip from RJBS
+
+0.01 - Release 29th. of May 2004
+
+- Initial revision
