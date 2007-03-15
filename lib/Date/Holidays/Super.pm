@@ -1,23 +1,26 @@
 package Date::Holidays::Super;
 
-# $Id: Super.pm 1369 2004-05-31 07:43:06Z jonasbn $
+# $Id: Super.pm 1830 2007-03-15 22:02:43Z jonasbn $
 
 use strict;
+use warnings;
 use vars qw($VERSION);
 
-$VERSION = '0.02';
+$VERSION = '0.03';
 
 sub is_holiday {
-	return 0;
+    return 0;
 }
 
 sub holidays {
-	return \%;
+    return \%;;
 }
 
 1;
 
 __END__
+
+=pod
 
 =head1 NAME
 
@@ -25,7 +28,7 @@ Date::Holidays::Super - a SUPER class for the Date::Holidays::* modules
 
 =head1 SYNOPSIS
 
-package MyHolidays;
+	package MyHolidays;
 
 	use Date::Holidays::Super;
 	use vars qw(@ISA);
@@ -38,7 +41,11 @@ package MyHolidays;
 
 	my $hashref = $mh->holidays( ... ); 
 
-=head1 ABSTRACT
+=head1 VERSION
+
+This POD described version 0.03 of Date::Holidays::Super
+
+=head1 DESCRIPTION
 
 This is a SUPER class intended for use by Date::Holidays::* modules.
 
@@ -46,8 +53,6 @@ The goal is to have all the existing and future modules implement the
 same methods, so they will have a uniform usage and can be used in
 polymorphic context or can be easily adapted into the Date::Holidays
 class.
-
-=head1 DESCRIPTION
 
 The class provides two methods: B<is_holiday> and B<holidays> an
 alternative to this class is Date::Holidays::Abstract, which does not
@@ -66,7 +71,7 @@ time in your Date::Holidays::* module.
 
 =back
 
-=head1 METHODS
+=head1 SUBROUTINES/METHODS
 
 =head2 is_holiday
 
@@ -127,7 +132,23 @@ This is an alternative to the abstract class L<Date::Holidays::Abstract>.
 
 Suggestions for changes and extensions are more than welcome.
 
-=head1 BUGS
+=head1 DIAGNOSTICS
+
+No special exceptions/diagnostics are used at this time, please see TODO file
+
+=head1 CONFIGURATION AND ENVIRONMENT
+
+No special configuration and/or environment required
+
+=head1 DEPENDENCIES
+
+No dependencies at this time
+
+=head1 INCOMPATIBILITIES
+
+No known incompatibilities at this time
+
+=head1 BUGS AND LIMITATIONS
 
 Please report issues via CPAN RT:
 
@@ -141,9 +162,9 @@ or by sending mail to
 
 =over
 
-=item Date::Holidays::Abstract
+=item L<Date::Holidays::Abstract>
 
-=item Date::Holidays
+=item L<Date::Holidays>
 
 =item Date::Holidays::*
 
@@ -153,9 +174,9 @@ or by sending mail to
 
 Jonas B. Nielsen, (jonasbn) - C<< <jonasbn@cpan.org> >>
 
-=head1 COPYRIGHT
+=head1 LICENSE AND COPYRIGHT
 
-Date-Holidays-Super is (C) by Jonas B. Nielsen, (jonasbn) 2004
+Date-Holidays-Super is (C) by Jonas B. Nielsen, (jonasbn) 2004-2007
 
 Date-Holidays-Super is released under the artistic license
 

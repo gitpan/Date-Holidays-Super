@@ -1,11 +1,33 @@
 Changes file for Date-Holidays-Super
 
-$Id: Changes 1369 2004-05-31 07:43:06Z jonasbn $
+$Id: Changes 1830 2007-03-15 22:02:43Z jonasbn $
+
+0.03 - Released Thu Mar 15 2007
+
+- Updated MANIFEST.SKIP to a more contemporary version
+
+- Updated README
+
+- Ran Date::Holidays::Super through perltidy
+
+- Updated POD, based on output from t/critic.t
+
+- Changed to Module::Build as primary build system
+
+- Fixed spelling error in this file s/Release/Released/
+
+- Added use warnings statement, based on output from t/critic.t
+
+- Added t/critic.t see Test::Perl::Critic
+
+- Added t/kwalitee.t see Test::Kwalitee
+
 
 0.02 - Released 31st. of May 2004 (update not necessary)
 
 - Indented code in POD after tip from RJBS
 
-0.01 - Release 29th. of May 2004
+
+0.01 - Released 29th. of May 2004
 
 - Initial revision
