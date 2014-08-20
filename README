@@ -1,136 +1,16 @@
-Date::Holidays::Super(3U)ser Contributed Perl DocumentatiDoante::Holidays::Super(3)
 
 
+This archive contains the distribution Date-Holidays-Super,
+version 0.04:
 
-NNAAMMEE
-       Date::Holidays::Super - a SUPER class for the Date::Holidays::* modules
+  a SUPER class for the Date::Holidays::* modules
 
-SSYYNNOOPPSSIISS
-       package MyHolidays;
+This software is Copyright (c) 2014 by Jonas B. Nielsen.
 
-               use Date::Holidays::Super;
-               use vars qw(@ISA);
+This is free software, licensed under:
 
-               @ISA = qw(Date::Holidays::Super);
-
-               my $mh = MyHolidays->new();
-
-               my $bool = $mh->is_holiday( ... );
-
-               my $hashref = $mh->holidays( ... );
-
-VVEERRSSIIOONN
-       This POD described version 0.04 of Date::Holidays::Super
-
-DDEESSCCRRIIPPTTIIOONN
-       This is a SUPER class intended for use by Date::Holidays::* modules.
-
-       The goal is to have all the existing and future modules implement the
-       same methods, so they will have a uniform usage and can be used in
-       polymorphic context or can be easily adapted into the Date::Holidays
-       class.
-
-       The class provides two methods: iiss__hhoolliiddaayy and hhoolliiddaayyss an alternative
-       to this class is Date::Holidays::Abstract, which does not implement
-       these methods, but require that they are implemented.
-
-       If you want to use Date::Holidays::Super and want to comply with my
-       suggestions to the methods that ought to be implemented, you should
-       overload the methods provided by this class, when and if you have the
-       time in your Date::Holidays::* module.
-
-       is_holiday
-       holidays
-
-SSUUBBRROOUUTTIINNEESS//MMEETTHHOODDSS
-       iiss__hhoolliiddaayy
-
-       Should at least take 3 arguments:
-
-       year, four digits
-       month, between 1-12
-       day, between 1-31
-
-       The return value from is holiday is either a 1 or 0 indicating true of
-       false, indicating whether the specified date is a holiday in the given
-       country's national calendar.
-
-       iiss__hhoolliiddaayy in the SUPER class returns 0 indicating false, since nothing
-       intelligent can be said about holidays without specifying a national
-       calendar.
-
-       Additional arguments are at the courtesy of the author of the using
-       module/class.
-
-       hhoolliiddaayyss
-
-       Should at least take one argument:
-
-       year, four digits
-
-       Returns a reference to a hash, where the keys are date represented as
-       four digits. The two first representing month (01-12) and the last two
-       representing day (01-31).
-
-       The value for the key in question is the local name for the holiday
-       indicated by the day. The resultset will of course vary depending on
-       the given country's national holiday.
-
-       hhoolliiddaayyss in the SUPER class return a reference to an empty hash, since
-       nothing intelligent can be said about holidays without specifying a
-       national calendar.
-
-       Additional arguments are at the courtesy of the author of the using
-       module/class.
-
-       --
-
-       Date::Holidays uses the requirements defined by this module and this
-       module can therefor be used with success in conjunction with this.
-
-       This is an alternative to the abstract class Date::Holidays::Abstract.
-
-       Suggestions for changes and extensions are more than welcome.
-
-DDIIAAGGNNOOSSTTIICCSS
-       No special exceptions/diagnostics are used at this time, please see
-       TODO file
-
-CCOONNFFIIGGUURRAATTIIOONN AANNDD EENNVVIIRROONNMMEENNTT
-       No special configuration and/or environment required
-
-DDEEPPEENNDDEENNCCIIEESS
-       No dependencies at this time
-
-IINNCCOOMMPPAATTIIBBIILLIITTIIEESS
-       No known incompatibilities at this time
-
-BBUUGGSS AANNDD LLIIMMIITTAATTIIOONNSS
-       Please report issues via CPAN RT:
-
-         http://rt.cpan.org/NoAuth/Bugs.html?Dist=Date-Holidays-Super
-
-       or by sending mail to
-
-         bug-Date-Holidays-Super@rt.cpan.org
-
-SSEEEE AALLSSOO
-       Date::Holidays::Abstract
-       Date::Holidays
-       Date::Holidays::*
-
-AAUUTTHHOORR
-       Jonas B. Nielsen, (jonasbn) - "<jonasbn@cpan.org>"
-
-LLIICCEENNSSEE AANNDD CCOOPPYYRRIIGGHHTT
-       Date-Holidays-Super is (C) by Jonas B. Nielsen, (jonasbn) 2004-2007
-
-       Date-Holidays-Super is released under the artistic license
-
-       The distribution is licensed under the Artistic License, as specified
-       by the Artistic file in the standard perl distribution
-       (http://www.perl.com/language/misc/Artistic.html).
+  The Artistic License 2.0 (GPL Compatible)
 
 
+This README file was generated by Dist::Zilla::Plugin::Readme v5.020.
 
-perl v5.8.6                       2007-02-13          Date::Holidays::Super(3)
